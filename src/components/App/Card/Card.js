@@ -1,6 +1,8 @@
+import '../Card/Card.css';
+
 const Card = ({ stance, name, obstacle, tutorial }) => {
   return (
-    <div>
+    <div className='card-container'>
       <p>{stance}</p>
       <p>{name}</p>
       <p>{obstacle}</p>
