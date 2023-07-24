@@ -29,7 +29,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
-      <div>{trickCards}</div>
+      <div className="tricks-container">{trickCards}</div>
     </div>
   );
 }
