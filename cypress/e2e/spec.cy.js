@@ -13,6 +13,17 @@ describe('Home Page', () => {
     cy.get('.tricks-container').children().should('have.length', 3)
   })
 
+  it("Should display tricks' information", () => {
+    cy.get('.card-container').first().contains('p', 'regular')
+    cy.get('.card-container').first().contains('p', 'treflip')
+    cy.get('.card-container').first().contains('p', 'flat ground')
+    cy.get('.card-container').first().contains('p', 'https://www.youtube.com/watch?v=XGw3YkQmNig')
+    cy.get('.card-container').last().contains('p', 'regular')
+    cy.get('.card-container').last().contains('p', 'frontside 50-50, backside 180 out')
+    cy.get('.card-container').last().contains('p', 'ledge')
+    cy.get('.card-container').last().contains('p', 'https://www.youtube.com/watch?v=9N9swrZU1HA')
+  })
+
   it('Should use the form inputs to add and display a new trick', () => {
     cy.get('select').first().select('Regular')
       .invoke('val').should('eq', 'Regular')
