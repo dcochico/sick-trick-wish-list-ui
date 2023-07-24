@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Tricks from './Tricks/Tricks';
 
 
 
@@ -14,10 +13,11 @@ const App = () => {
       .then(data => setTricks(data))
   }, [])
 
+  console.log(tricks)
+
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
-      <Tricks tricks={tricks} />
     </div>
   );
 }
