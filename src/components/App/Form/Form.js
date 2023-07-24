@@ -23,6 +23,7 @@ const Form = ({tricks, setTricks}) => {
     }
     setTricks([...tricks, newTrick]);
     reset();
+    console.log(tricks);
   }
 
   return (
@@ -62,7 +63,7 @@ const Form = ({tricks, setTricks}) => {
         value={tutorial}
         onChange={e => setTutorial(e.target.value)}
       />
-      <button onClick={addTrick}>SEND IT</button>
+      <button onClick={e => addTrick(e)}>SEND IT</button>
     </form>
   )
 }
