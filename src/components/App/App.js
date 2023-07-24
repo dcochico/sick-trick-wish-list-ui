@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
-      <Form />
+      <Form tricks={tricks} setTricks={setTricks} />
       <div className="tricks-container">{trickCards}</div>
     </div>
   );

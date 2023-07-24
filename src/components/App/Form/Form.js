@@ -1,10 +1,29 @@
 import { useState } from "react";
 
-const Form = () => {
+const Form = ({tricks, setTricks}) => {
   const [stance, setStance] = useState('');
   const [name, setName] = useState('');
   const [obstacle, setObstacle] = useState('');
   const [tutorial, setTutorial] = useState('');
+
+  const reset = () => {
+    setStance('');
+    setName('');
+    setObstacle('');
+    setTutorial('');
+  }
+
+  const addTrick = e => {
+    e.preventDefault();
+    let newTrick = {
+      stance: stance,
+      name: name,
+      obstacle: obstacle,
+      tutorial: tutorial
+    }
+    setTricks([...tricks, newTrick]);
+    reset();
+  }
 
   return (
     <form>
@@ -43,7 +62,7 @@ const Form = () => {
         value={tutorial}
         onChange={e => setTutorial(e.target.value)}
       />
-      <button>SEND IT</button>
+      <button onClick={addTrick}>SEND IT</button>
     </form>
   )
 }
