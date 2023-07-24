@@ -17,6 +17,7 @@ const App = () => {
   const trickCards = tricks.map(trick => {
     return (
       <Card 
+        key = {trick.id}
         stance = {trick.stance}
         name = {trick.name}
         obstacle = {trick.obstacle}
