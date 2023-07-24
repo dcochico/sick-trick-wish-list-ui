@@ -1,4 +1,4 @@
-const Card = (stance, name, obstacle, tutorial) => {
+const Card = ({ stance, name, obstacle, tutorial }) => {
   return (
     <div>
       <p>{stance}</p>
