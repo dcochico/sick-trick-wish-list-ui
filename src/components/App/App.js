@@ -6,6 +6,12 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [tricks, setTricks] = useState('');
+  
+  useEffect(() => {
+    fetch('http://localhost:3001/api/v1/tricks')
+      .then(res => res.json())
+      .then(data => setTricks(data))
+  }, [])
 
   return (
     <div className="App">
