@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Tricks from './Tricks/Tricks';
 
 
 
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Sick Trick Wish List</h1>
+      <Tricks tricks={tricks} />
     </div>
   );
 }
